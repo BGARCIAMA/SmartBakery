@@ -51,7 +51,7 @@ Los documentos que conforman el working backwards, donde se detalla el proceso y
 
 * **Arquitectura de la solución**
     El siguiente diagrama muestra las conexiones de las interacciones entre los servicios utilizados por la plataforma de SmartBakery.
-    ![Ver Diagrama](imgs/Arq_SmartBakery.png)
+    [Consultar PDF](working_backwards/04_Arquitectura_SmartBakery.pdf) ![Ver Diagrama](imgs/Arq_SmartBakery.png)
 
 # Base de datos  ✍
 * El principal conjunto de datos utilizado en este análisis pertenece a una panadería francesa y proporciona los detalles de las transacciones diarias de los clientes desde el 1.ene.2021 hasta el 30.sep.2022. El conjunto de datos tiene más de 136 mil transacciones con 6 variables: fecha, hora de la orden, número de ticket, nombre del producto vendido, cantidad y precio unitario del producto. [Base de datos de Kaggle](https://www.kaggle.com/datasets/matthieugimbert/french-bakery-daily-sales?resource=download) 
