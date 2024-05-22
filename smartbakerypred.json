@@ -1,0 +1,9 @@
+{
+    "fileLocations": [
+        {
+            "URIs": [
+                "https://smartbakery.s3.amazonaws.com/analytics_data/prediccion.csv"
+            ]
+        }
+    ]
+}

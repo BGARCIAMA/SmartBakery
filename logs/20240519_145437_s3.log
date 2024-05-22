@@ -1,0 +1,435 @@
+root - INFO - Credenciales de AWS cargadas correctamente
+root - INFO - Nombre del bucket y archivo definidos correctamente
+root - INFO - Archivo CSV ./data/prep/data_bakery_prep.csv cargado correctamente
+botocore.hooks - DEBUG - Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+botocore.hooks - DEBUG - Changing event name from before-call.apigateway to before-call.api-gateway
+botocore.hooks - DEBUG - Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+botocore.hooks - DEBUG - Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+botocore.hooks - DEBUG - Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+botocore.hooks - DEBUG - Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+botocore.hooks - DEBUG - Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+botocore.hooks - DEBUG - Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+botocore.hooks - DEBUG - Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+botocore.hooks - DEBUG - Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+botocore.hooks - DEBUG - Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+botocore.loaders - DEBUG - Loading JSON file: /opt/homebrew/Caskroom/miniconda/base/envs/smartbakery/lib/python3.11/site-packages/botocore/data/endpoints.json
+botocore.loaders - DEBUG - Loading JSON file: /opt/homebrew/Caskroom/miniconda/base/envs/smartbakery/lib/python3.11/site-packages/botocore/data/sdk-default-configuration.json
+botocore.hooks - DEBUG - Event choose-service-name: calling handler <function handle_service_name_alias at 0x142e591c0>
+botocore.loaders - DEBUG - Loading JSON file: /opt/homebrew/Caskroom/miniconda/base/envs/smartbakery/lib/python3.11/site-packages/botocore/data/s3/2006-03-01/service-2.json
+botocore.loaders - DEBUG - Loading JSON file: /opt/homebrew/Caskroom/miniconda/base/envs/smartbakery/lib/python3.11/site-packages/botocore/data/s3/2006-03-01/endpoint-rule-set-1.json
+botocore.loaders - DEBUG - Loading JSON file: /opt/homebrew/Caskroom/miniconda/base/envs/smartbakery/lib/python3.11/site-packages/botocore/data/partitions.json
+botocore.hooks - DEBUG - Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x142c71260>
+botocore.hooks - DEBUG - Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x142ef8220>
+botocore.hooks - DEBUG - Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x142c70fe0>
+botocore.configprovider - DEBUG - Looking for endpoint for s3 via: environment_service
+botocore.configprovider - DEBUG - Looking for endpoint for s3 via: environment_global
+botocore.configprovider - DEBUG - Looking for endpoint for s3 via: config_service
+botocore.configprovider - DEBUG - Looking for endpoint for s3 via: config_global
+botocore.configprovider - DEBUG - No configured endpoint found.
+botocore.endpoint - DEBUG - Setting s3 timeout as (60, 60)
+botocore.loaders - DEBUG - Loading JSON file: /opt/homebrew/Caskroom/miniconda/base/envs/smartbakery/lib/python3.11/site-packages/botocore/data/_retry.json
+botocore.client - DEBUG - Registering retry handlers for service: s3
+botocore.utils - DEBUG - Registering S3 region redirector handler
+botocore.utils - DEBUG - Registering S3Express Identity Resolver
+root - INFO - Cliente S3 creado correctamente
+boto3.s3.transfer - DEBUG - Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+boto3.s3.transfer - DEBUG - Using default client. pid: 54127, thread: 8463432384
+s3transfer.utils - DEBUG - Acquiring 0
+s3transfer.tasks - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x14695e350>}) about to wait for the following futures []
+s3transfer.tasks - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x14695e350>}) done waiting for dependent futures
+s3transfer.tasks - DEBUG - Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x14695e350>}) with kwargs {'client': <botocore.client.S3 object at 0x1467edbd0>, 'config': <boto3.s3.transfer.TransferConfig object at 0x141fcfd90>, 'osutil': <s3transfer.utils.OSUtils object at 0x141f62e90>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x14695d850>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x14695e350>}
+s3transfer.futures - DEBUG - Submitting task CreateMultipartUploadTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x14695d850> for transfer request: 0.
+s3transfer.utils - DEBUG - Acquiring 0
+s3transfer.tasks - DEBUG - CreateMultipartUploadTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'extra_args': {}}) about to wait for the following futures []
+s3transfer.futures - DEBUG - Submitting task UploadPartTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'part_number': 1, 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x14695d850> for transfer request: 0.
+s3transfer.tasks - DEBUG - CreateMultipartUploadTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'extra_args': {}}) done waiting for dependent futures
+s3transfer.utils - DEBUG - Acquiring 0
+s3transfer.tasks - DEBUG - Executing task CreateMultipartUploadTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x1467edbd0>, 'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'extra_args': {}}
+s3transfer.tasks - DEBUG - UploadPartTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'part_number': 1, 'extra_args': {}}) about to wait for the following futures [<s3transfer.futures.ExecutorFuture object at 0x14695f290>]
+botocore.hooks - DEBUG - Event before-parameter-build.s3.CreateMultipartUpload: calling handler <function validate_ascii_metadata at 0x142e5ba60>
+s3transfer.futures - DEBUG - Submitting task UploadPartTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'part_number': 2, 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x14695d850> for transfer request: 0.
+s3transfer.tasks - DEBUG - UploadPartTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'part_number': 1, 'extra_args': {}}) about to wait for <s3transfer.futures.ExecutorFuture object at 0x14695f290>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.CreateMultipartUpload: calling handler <function sse_md5 at 0x142e5ad40>
+s3transfer.utils - DEBUG - Acquiring 0
+botocore.hooks - DEBUG - Event before-parameter-build.s3.CreateMultipartUpload: calling handler <function validate_bucket_name at 0x142e5aca0>
+s3transfer.tasks - DEBUG - UploadPartTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'part_number': 2, 'extra_args': {}}) about to wait for the following futures [<s3transfer.futures.ExecutorFuture object at 0x14695f290>]
+botocore.hooks - DEBUG - Event before-parameter-build.s3.CreateMultipartUpload: calling handler <function remove_bucket_from_url_paths_from_model at 0x142e7cea0>
+s3transfer.futures - DEBUG - Submitting task UploadPartTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'part_number': 3, 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x14695d850> for transfer request: 0.
+s3transfer.tasks - DEBUG - UploadPartTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'part_number': 2, 'extra_args': {}}) about to wait for <s3transfer.futures.ExecutorFuture object at 0x14695f290>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.CreateMultipartUpload: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x14693ba50>>
+s3transfer.utils - DEBUG - Acquiring 0
+botocore.hooks - DEBUG - Event before-parameter-build.s3.CreateMultipartUpload: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x1464f0290>>
+s3transfer.tasks - DEBUG - UploadPartTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'part_number': 3, 'extra_args': {}}) about to wait for the following futures [<s3transfer.futures.ExecutorFuture object at 0x14695f290>]
+s3transfer.futures - DEBUG - Submitting task CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x14695d850> for transfer request: 0.
+botocore.hooks - DEBUG - Event before-parameter-build.s3.CreateMultipartUpload: calling handler <function generate_idempotent_uuid at 0x142e5aac0>
+s3transfer.tasks - DEBUG - UploadPartTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'part_number': 3, 'extra_args': {}}) about to wait for <s3transfer.futures.ExecutorFuture object at 0x14695f290>
+s3transfer.utils - DEBUG - Acquiring 0
+botocore.hooks - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x142e7d080>
+s3transfer.tasks - DEBUG - CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'extra_args': {}}) about to wait for the following futures [<s3transfer.futures.ExecutorFuture object at 0x14695f290>, <s3transfer.futures.ExecutorFuture object at 0x14695fcd0>, <s3transfer.futures.ExecutorFuture object at 0x146970390>, <s3transfer.futures.ExecutorFuture object at 0x146970d90>]
+botocore.hooks - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x14693ba50>>
+s3transfer.utils - DEBUG - Releasing acquire 0/None
+s3transfer.tasks - DEBUG - CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'extra_args': {}}) about to wait for <s3transfer.futures.ExecutorFuture object at 0x14695f290>
+botocore.regions - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'smartbakery', 'Region': 'us-east-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'Key': 'clean_data/clean_bakery_sales.csv', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+botocore.regions - DEBUG - Endpoint provider result: https://smartbakery.s3.amazonaws.com
+botocore.regions - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+botocore.regions - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+botocore.hooks - DEBUG - Event before-call.s3.CreateMultipartUpload: calling handler <function add_expect_header at 0x142e5b060>
+botocore.hooks - DEBUG - Event before-call.s3.CreateMultipartUpload: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x14695d7d0>>
+botocore.hooks - DEBUG - Event before-call.s3.CreateMultipartUpload: calling handler <function add_recursion_detection_header at 0x142e59a80>
+botocore.hooks - DEBUG - Event before-call.s3.CreateMultipartUpload: calling handler <function inject_api_version_header_if_needed at 0x142e7c5e0>
+botocore.endpoint - DEBUG - Making request for OperationModel(name=CreateMultipartUpload) with params: {'url_path': '/clean_data/clean_bakery_sales.csv?uploads', 'query_string': {}, 'method': 'POST', 'headers': {'User-Agent': 'Boto3/1.34.106 md/Botocore#1.34.107 ua/2.0 os/macos#23.4.0 md/arch#arm64 lang/python#3.11.9 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.107'}, 'body': b'', 'auth_path': '/smartbakery/clean_data/clean_bakery_sales.csv', 'url': 'https://smartbakery.s3.amazonaws.com/clean_data/clean_bakery_sales.csv?uploads', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x14693a4d0>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'smartbakery', 'params': {'Bucket': 'smartbakery', 'Key': 'clean_data/clean_bakery_sales.csv'}}, 'input_params': {'Bucket': 'smartbakery', 'Key': 'clean_data/clean_bakery_sales.csv'}, 'signing': {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'us-east-1'}]}}}
+botocore.hooks - DEBUG - Event request-created.s3.CreateMultipartUpload: calling handler <function signal_not_transferring at 0x1468e00e0>
+botocore.hooks - DEBUG - Event request-created.s3.CreateMultipartUpload: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x14693a490>>
+botocore.hooks - DEBUG - Event choose-signer.s3.CreateMultipartUpload: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x1464f0290>>
+botocore.hooks - DEBUG - Event choose-signer.s3.CreateMultipartUpload: calling handler <function set_operation_specific_signer at 0x142e5a980>
+botocore.hooks - DEBUG - Event before-sign.s3.CreateMultipartUpload: calling handler <function remove_arn_from_signing_path at 0x142e7cfe0>
+botocore.hooks - DEBUG - Event before-sign.s3.CreateMultipartUpload: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x14695d7d0>>
+botocore.auth - DEBUG - Calculating signature using v4 auth.
+botocore.auth - DEBUG - CanonicalRequest:
+POST
+/clean_data/clean_bakery_sales.csv
+uploads=
+host:smartbakery.s3.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240519T205437Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+botocore.auth - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240519T205437Z
+20240519/us-east-1/s3/aws4_request
+f8f36999af424c46a465649360d330359cea3a6d72c3fe096bf3e378a038e29c
+botocore.auth - DEBUG - Signature:
+e231209fa9818fb29cd7be4bfd81fbb5cc51cac84ba97e9cbb86ad5007110260
+botocore.hooks - DEBUG - Event request-created.s3.CreateMultipartUpload: calling handler <function signal_transferring at 0x1468e0180>
+botocore.hooks - DEBUG - Event request-created.s3.CreateMultipartUpload: calling handler <function add_retry_headers at 0x142e7ce00>
+botocore.endpoint - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://smartbakery.s3.amazonaws.com/clean_data/clean_bakery_sales.csv?uploads, headers={'User-Agent': b'Boto3/1.34.106 md/Botocore#1.34.107 ua/2.0 os/macos#23.4.0 md/arch#arm64 lang/python#3.11.9 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.107', 'X-Amz-Date': b'20240519T205437Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAQ3EGV3Y7DDFTHXM6/20240519/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=e231209fa9818fb29cd7be4bfd81fbb5cc51cac84ba97e9cbb86ad5007110260', 'amz-sdk-invocation-id': b'7f1bb406-9f02-4c0b-9d7d-fe03068c2809', 'amz-sdk-request': b'attempt=1', 'Content-Length': '0'}>
+botocore.httpsession - DEBUG - Certificate path: /opt/homebrew/Caskroom/miniconda/base/envs/smartbakery/lib/python3.11/site-packages/certifi/cacert.pem
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): smartbakery.s3.amazonaws.com:443
+urllib3.connectionpool - DEBUG - https://smartbakery.s3.amazonaws.com:443 "POST /clean_data/clean_bakery_sales.csv?uploads HTTP/1.1" 200 None
+botocore.parsers - DEBUG - Response headers: {'x-amz-id-2': 'yHTEX1VdBnQuu7ZVKLNbFCSQBI4rrkwItqmXUVUGLRxKGSW1+nRWL/CHrx1SMUGO8i82teIN3DY=', 'x-amz-request-id': '4MPSQFW2RVVH7D5Z', 'Date': 'Sun, 19 May 2024 20:54:38 GMT', 'x-amz-server-side-encryption': 'AES256', 'Transfer-Encoding': 'chunked', 'Server': 'AmazonS3'}
+botocore.parsers - DEBUG - Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<InitiateMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Bucket>smartbakery</Bucket><Key>clean_data/clean_bakery_sales.csv</Key><UploadId>.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO</UploadId></InitiateMultipartUploadResult>'
+botocore.hooks - DEBUG - Event needs-retry.s3.CreateMultipartUpload: calling handler <botocore.retryhandler.RetryHandler object at 0x14695d550>
+botocore.retryhandler - DEBUG - No retry needed.
+botocore.hooks - DEBUG - Event needs-retry.s3.CreateMultipartUpload: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x14693ba50>>
+s3transfer.utils - DEBUG - Releasing acquire 0/None
+s3transfer.tasks - DEBUG - UploadPartTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'part_number': 1, 'extra_args': {}}) done waiting for dependent futures
+s3transfer.tasks - DEBUG - UploadPartTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'part_number': 2, 'extra_args': {}}) done waiting for dependent futures
+s3transfer.tasks - DEBUG - UploadPartTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'part_number': 3, 'extra_args': {}}) done waiting for dependent futures
+s3transfer.tasks - DEBUG - CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'extra_args': {}}) about to wait for <s3transfer.futures.ExecutorFuture object at 0x14695fcd0>
+s3transfer.tasks - DEBUG - Executing task UploadPartTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'part_number': 1, 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x1467edbd0>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x14695f510>, 'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'part_number': 1, 'extra_args': {}, 'upload_id': '.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO'}
+s3transfer.tasks - DEBUG - Executing task UploadPartTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'part_number': 2, 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x1467edbd0>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x14695ff90>, 'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'part_number': 2, 'extra_args': {}, 'upload_id': '.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO'}
+s3transfer.tasks - DEBUG - Executing task UploadPartTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'part_number': 3, 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x1467edbd0>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x146970810>, 'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'part_number': 3, 'extra_args': {}, 'upload_id': '.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO'}
+botocore.hooks - DEBUG - Event before-parameter-build.s3.UploadPart: calling handler <function sse_md5 at 0x142e5ad40>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.UploadPart: calling handler <function sse_md5 at 0x142e5ad40>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.UploadPart: calling handler <function sse_md5 at 0x142e5ad40>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.UploadPart: calling handler <function convert_body_to_file_like_object at 0x142e7c4a0>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.UploadPart: calling handler <function convert_body_to_file_like_object at 0x142e7c4a0>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.UploadPart: calling handler <function convert_body_to_file_like_object at 0x142e7c4a0>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.UploadPart: calling handler <function validate_bucket_name at 0x142e5aca0>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.UploadPart: calling handler <function validate_bucket_name at 0x142e5aca0>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.UploadPart: calling handler <function validate_bucket_name at 0x142e5aca0>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.UploadPart: calling handler <function remove_bucket_from_url_paths_from_model at 0x142e7cea0>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.UploadPart: calling handler <function remove_bucket_from_url_paths_from_model at 0x142e7cea0>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.UploadPart: calling handler <function remove_bucket_from_url_paths_from_model at 0x142e7cea0>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.UploadPart: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x14693ba50>>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.UploadPart: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x14693ba50>>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.UploadPart: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x14693ba50>>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.UploadPart: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x1464f0290>>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.UploadPart: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x1464f0290>>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.UploadPart: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x1464f0290>>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.UploadPart: calling handler <function generate_idempotent_uuid at 0x142e5aac0>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.UploadPart: calling handler <function generate_idempotent_uuid at 0x142e5aac0>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.UploadPart: calling handler <function generate_idempotent_uuid at 0x142e5aac0>
+botocore.hooks - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x142e7d080>
+botocore.hooks - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x142e7d080>
+botocore.hooks - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x142e7d080>
+botocore.hooks - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x14693ba50>>
+botocore.hooks - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x14693ba50>>
+botocore.hooks - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x14693ba50>>
+botocore.regions - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'smartbakery', 'Region': 'us-east-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'Key': 'clean_data/clean_bakery_sales.csv', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+botocore.regions - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'smartbakery', 'Region': 'us-east-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'Key': 'clean_data/clean_bakery_sales.csv', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+botocore.regions - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'smartbakery', 'Region': 'us-east-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'Key': 'clean_data/clean_bakery_sales.csv', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+botocore.regions - DEBUG - Endpoint provider result: https://smartbakery.s3.amazonaws.com
+botocore.regions - DEBUG - Endpoint provider result: https://smartbakery.s3.amazonaws.com
+botocore.regions - DEBUG - Endpoint provider result: https://smartbakery.s3.amazonaws.com
+botocore.regions - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+botocore.regions - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+botocore.regions - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+botocore.regions - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+botocore.regions - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+botocore.regions - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+botocore.hooks - DEBUG - Event before-call.s3.UploadPart: calling handler <function conditionally_calculate_md5 at 0x142b9c900>
+botocore.hooks - DEBUG - Event before-call.s3.UploadPart: calling handler <function conditionally_calculate_md5 at 0x142b9c900>
+botocore.hooks - DEBUG - Event before-call.s3.UploadPart: calling handler <function conditionally_calculate_md5 at 0x142b9c900>
+botocore.hooks - DEBUG - Event before-call.s3.UploadPart: calling handler <function add_expect_header at 0x142e5b060>
+botocore.handlers - DEBUG - Adding expect 100 continue header to request.
+botocore.hooks - DEBUG - Event before-call.s3.UploadPart: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x14695d7d0>>
+botocore.hooks - DEBUG - Event before-call.s3.UploadPart: calling handler <function add_recursion_detection_header at 0x142e59a80>
+botocore.hooks - DEBUG - Event before-call.s3.UploadPart: calling handler <function inject_api_version_header_if_needed at 0x142e7c5e0>
+botocore.endpoint - DEBUG - Making request for OperationModel(name=UploadPart) with params: {'url_path': '/clean_data/clean_bakery_sales.csv', 'query_string': {'uploadId': '.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO', 'partNumber': 3}, 'method': 'PUT', 'headers': {'User-Agent': 'Boto3/1.34.106 md/Botocore#1.34.107 ua/2.0 os/macos#23.4.0 md/arch#arm64 lang/python#3.11.9 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.107', 'Content-MD5': 'OGlxUGyEeJKWvcKAieRTog==', 'Expect': '100-continue'}, 'body': <s3transfer.utils.ReadFileChunk object at 0x146970810>, 'auth_path': '/smartbakery/clean_data/clean_bakery_sales.csv', 'url': 'https://smartbakery.s3.amazonaws.com/clean_data/clean_bakery_sales.csv?uploadId=.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO&partNumber=3', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x14693a4d0>, 'has_streaming_input': True, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'smartbakery', 'params': {'Bucket': 'smartbakery', 'Key': 'clean_data/clean_bakery_sales.csv', 'UploadId': '.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO', 'PartNumber': 3, 'Body': <s3transfer.utils.ReadFileChunk object at 0x146970810>}}, 'input_params': {'Bucket': 'smartbakery', 'Key': 'clean_data/clean_bakery_sales.csv'}, 'signing': {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'us-east-1'}]}}}
+botocore.hooks - DEBUG - Event request-created.s3.UploadPart: calling handler <function signal_not_transferring at 0x1468e00e0>
+botocore.hooks - DEBUG - Event request-created.s3.UploadPart: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x14693a490>>
+botocore.hooks - DEBUG - Event choose-signer.s3.UploadPart: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x1464f0290>>
+botocore.hooks - DEBUG - Event choose-signer.s3.UploadPart: calling handler <function set_operation_specific_signer at 0x142e5a980>
+botocore.hooks - DEBUG - Event before-sign.s3.UploadPart: calling handler <function remove_arn_from_signing_path at 0x142e7cfe0>
+botocore.hooks - DEBUG - Event before-sign.s3.UploadPart: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x14695d7d0>>
+botocore.auth - DEBUG - Calculating signature using v4 auth.
+botocore.auth - DEBUG - CanonicalRequest:
+PUT
+/clean_data/clean_bakery_sales.csv
+partNumber=3&uploadId=.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO
+content-md5:OGlxUGyEeJKWvcKAieRTog==
+host:smartbakery.s3.amazonaws.com
+x-amz-content-sha256:UNSIGNED-PAYLOAD
+x-amz-date:20240519T205437Z
+
+content-md5;host;x-amz-content-sha256;x-amz-date
+UNSIGNED-PAYLOAD
+botocore.auth - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240519T205437Z
+20240519/us-east-1/s3/aws4_request
+50541475e595a6703aa33acc48f21bb93306eed4533de5747623623ade5febfb
+botocore.auth - DEBUG - Signature:
+c57b7dc757b522717187e88653b54031d010b2f4a6af73ff843405e2f442c53f
+botocore.hooks - DEBUG - Event request-created.s3.UploadPart: calling handler <function signal_transferring at 0x1468e0180>
+botocore.hooks - DEBUG - Event request-created.s3.UploadPart: calling handler <function add_retry_headers at 0x142e7ce00>
+botocore.endpoint - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://smartbakery.s3.amazonaws.com/clean_data/clean_bakery_sales.csv?uploadId=.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO&partNumber=3, headers={'User-Agent': b'Boto3/1.34.106 md/Botocore#1.34.107 ua/2.0 os/macos#23.4.0 md/arch#arm64 lang/python#3.11.9 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.107', 'Content-MD5': b'OGlxUGyEeJKWvcKAieRTog==', 'Expect': b'100-continue', 'X-Amz-Date': b'20240519T205437Z', 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAQ3EGV3Y7DDFTHXM6/20240519/us-east-1/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=c57b7dc757b522717187e88653b54031d010b2f4a6af73ff843405e2f442c53f', 'amz-sdk-invocation-id': b'8e554c8f-b156-4810-a3a2-aeb245184ddb', 'amz-sdk-request': b'attempt=1', 'Content-Length': '5349048'}>
+botocore.httpsession - DEBUG - Certificate path: /opt/homebrew/Caskroom/miniconda/base/envs/smartbakery/lib/python3.11/site-packages/certifi/cacert.pem
+botocore.awsrequest - DEBUG - Waiting for 100 Continue response.
+botocore.hooks - DEBUG - Event before-call.s3.UploadPart: calling handler <function add_expect_header at 0x142e5b060>
+botocore.handlers - DEBUG - Adding expect 100 continue header to request.
+botocore.hooks - DEBUG - Event before-call.s3.UploadPart: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x14695d7d0>>
+botocore.hooks - DEBUG - Event before-call.s3.UploadPart: calling handler <function add_recursion_detection_header at 0x142e59a80>
+botocore.hooks - DEBUG - Event before-call.s3.UploadPart: calling handler <function inject_api_version_header_if_needed at 0x142e7c5e0>
+botocore.endpoint - DEBUG - Making request for OperationModel(name=UploadPart) with params: {'url_path': '/clean_data/clean_bakery_sales.csv', 'query_string': {'uploadId': '.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO', 'partNumber': 1}, 'method': 'PUT', 'headers': {'User-Agent': 'Boto3/1.34.106 md/Botocore#1.34.107 ua/2.0 os/macos#23.4.0 md/arch#arm64 lang/python#3.11.9 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.107', 'Content-MD5': 'c4SheK/mrXeDEPx+e7gsug==', 'Expect': '100-continue'}, 'body': <s3transfer.utils.ReadFileChunk object at 0x14695f510>, 'auth_path': '/smartbakery/clean_data/clean_bakery_sales.csv', 'url': 'https://smartbakery.s3.amazonaws.com/clean_data/clean_bakery_sales.csv?uploadId=.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO&partNumber=1', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x14693a4d0>, 'has_streaming_input': True, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'smartbakery', 'params': {'Bucket': 'smartbakery', 'Key': 'clean_data/clean_bakery_sales.csv', 'UploadId': '.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO', 'PartNumber': 1, 'Body': <s3transfer.utils.ReadFileChunk object at 0x14695f510>}}, 'input_params': {'Bucket': 'smartbakery', 'Key': 'clean_data/clean_bakery_sales.csv'}, 'signing': {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'us-east-1'}]}}}
+botocore.hooks - DEBUG - Event request-created.s3.UploadPart: calling handler <function signal_not_transferring at 0x1468e00e0>
+botocore.hooks - DEBUG - Event request-created.s3.UploadPart: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x14693a490>>
+botocore.hooks - DEBUG - Event choose-signer.s3.UploadPart: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x1464f0290>>
+botocore.hooks - DEBUG - Event choose-signer.s3.UploadPart: calling handler <function set_operation_specific_signer at 0x142e5a980>
+botocore.hooks - DEBUG - Event before-sign.s3.UploadPart: calling handler <function remove_arn_from_signing_path at 0x142e7cfe0>
+botocore.hooks - DEBUG - Event before-sign.s3.UploadPart: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x14695d7d0>>
+botocore.hooks - DEBUG - Event before-call.s3.UploadPart: calling handler <function add_expect_header at 0x142e5b060>
+botocore.auth - DEBUG - Calculating signature using v4 auth.
+botocore.handlers - DEBUG - Adding expect 100 continue header to request.
+botocore.auth - DEBUG - CanonicalRequest:
+PUT
+/clean_data/clean_bakery_sales.csv
+partNumber=1&uploadId=.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO
+content-md5:c4SheK/mrXeDEPx+e7gsug==
+host:smartbakery.s3.amazonaws.com
+x-amz-content-sha256:UNSIGNED-PAYLOAD
+x-amz-date:20240519T205437Z
+
+content-md5;host;x-amz-content-sha256;x-amz-date
+UNSIGNED-PAYLOAD
+botocore.hooks - DEBUG - Event before-call.s3.UploadPart: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x14695d7d0>>
+botocore.auth - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240519T205437Z
+20240519/us-east-1/s3/aws4_request
+810365ceca5550f26b4b9c88d12ed941b53f6ae1d2ae7f6dc9e5d30ab190fa26
+botocore.hooks - DEBUG - Event before-call.s3.UploadPart: calling handler <function add_recursion_detection_header at 0x142e59a80>
+botocore.auth - DEBUG - Signature:
+09b584363ad9430fe978323f226d45ab66a62d89b6d075f188de2de472aec19d
+botocore.hooks - DEBUG - Event before-call.s3.UploadPart: calling handler <function inject_api_version_header_if_needed at 0x142e7c5e0>
+botocore.hooks - DEBUG - Event request-created.s3.UploadPart: calling handler <function signal_transferring at 0x1468e0180>
+botocore.endpoint - DEBUG - Making request for OperationModel(name=UploadPart) with params: {'url_path': '/clean_data/clean_bakery_sales.csv', 'query_string': {'uploadId': '.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO', 'partNumber': 2}, 'method': 'PUT', 'headers': {'User-Agent': 'Boto3/1.34.106 md/Botocore#1.34.107 ua/2.0 os/macos#23.4.0 md/arch#arm64 lang/python#3.11.9 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.107', 'Content-MD5': '6YJndlEdP/qocL5Xhu2n4g==', 'Expect': '100-continue'}, 'body': <s3transfer.utils.ReadFileChunk object at 0x14695ff90>, 'auth_path': '/smartbakery/clean_data/clean_bakery_sales.csv', 'url': 'https://smartbakery.s3.amazonaws.com/clean_data/clean_bakery_sales.csv?uploadId=.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO&partNumber=2', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x14693a4d0>, 'has_streaming_input': True, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'smartbakery', 'params': {'Bucket': 'smartbakery', 'Key': 'clean_data/clean_bakery_sales.csv', 'UploadId': '.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO', 'PartNumber': 2, 'Body': <s3transfer.utils.ReadFileChunk object at 0x14695ff90>}}, 'input_params': {'Bucket': 'smartbakery', 'Key': 'clean_data/clean_bakery_sales.csv'}, 'signing': {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'us-east-1'}]}}}
+botocore.hooks - DEBUG - Event request-created.s3.UploadPart: calling handler <function add_retry_headers at 0x142e7ce00>
+botocore.hooks - DEBUG - Event request-created.s3.UploadPart: calling handler <function signal_not_transferring at 0x1468e00e0>
+botocore.endpoint - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://smartbakery.s3.amazonaws.com/clean_data/clean_bakery_sales.csv?uploadId=.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO&partNumber=1, headers={'User-Agent': b'Boto3/1.34.106 md/Botocore#1.34.107 ua/2.0 os/macos#23.4.0 md/arch#arm64 lang/python#3.11.9 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.107', 'Content-MD5': b'c4SheK/mrXeDEPx+e7gsug==', 'Expect': b'100-continue', 'X-Amz-Date': b'20240519T205437Z', 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAQ3EGV3Y7DDFTHXM6/20240519/us-east-1/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=09b584363ad9430fe978323f226d45ab66a62d89b6d075f188de2de472aec19d', 'amz-sdk-invocation-id': b'657ceff1-3871-4267-9a8f-4d5402017f83', 'amz-sdk-request': b'attempt=1', 'Content-Length': '8388608'}>
+botocore.hooks - DEBUG - Event request-created.s3.UploadPart: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x14693a490>>
+botocore.httpsession - DEBUG - Certificate path: /opt/homebrew/Caskroom/miniconda/base/envs/smartbakery/lib/python3.11/site-packages/certifi/cacert.pem
+botocore.hooks - DEBUG - Event choose-signer.s3.UploadPart: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x1464f0290>>
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (2): smartbakery.s3.amazonaws.com:443
+botocore.hooks - DEBUG - Event choose-signer.s3.UploadPart: calling handler <function set_operation_specific_signer at 0x142e5a980>
+botocore.hooks - DEBUG - Event before-sign.s3.UploadPart: calling handler <function remove_arn_from_signing_path at 0x142e7cfe0>
+botocore.hooks - DEBUG - Event before-sign.s3.UploadPart: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x14695d7d0>>
+botocore.auth - DEBUG - Calculating signature using v4 auth.
+botocore.auth - DEBUG - CanonicalRequest:
+PUT
+/clean_data/clean_bakery_sales.csv
+partNumber=2&uploadId=.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO
+content-md5:6YJndlEdP/qocL5Xhu2n4g==
+host:smartbakery.s3.amazonaws.com
+x-amz-content-sha256:UNSIGNED-PAYLOAD
+x-amz-date:20240519T205437Z
+
+content-md5;host;x-amz-content-sha256;x-amz-date
+UNSIGNED-PAYLOAD
+botocore.auth - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240519T205437Z
+20240519/us-east-1/s3/aws4_request
+48c6b868ebac5a780637f6649809f84e715bb501c918dac6283935b05066d1f7
+botocore.auth - DEBUG - Signature:
+75f584449cdca7da19bd6962c073f30268d1a5165e513b50f7ea48ae2012336c
+botocore.hooks - DEBUG - Event request-created.s3.UploadPart: calling handler <function signal_transferring at 0x1468e0180>
+botocore.hooks - DEBUG - Event request-created.s3.UploadPart: calling handler <function add_retry_headers at 0x142e7ce00>
+botocore.endpoint - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://smartbakery.s3.amazonaws.com/clean_data/clean_bakery_sales.csv?uploadId=.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO&partNumber=2, headers={'User-Agent': b'Boto3/1.34.106 md/Botocore#1.34.107 ua/2.0 os/macos#23.4.0 md/arch#arm64 lang/python#3.11.9 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.107', 'Content-MD5': b'6YJndlEdP/qocL5Xhu2n4g==', 'Expect': b'100-continue', 'X-Amz-Date': b'20240519T205437Z', 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAQ3EGV3Y7DDFTHXM6/20240519/us-east-1/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=75f584449cdca7da19bd6962c073f30268d1a5165e513b50f7ea48ae2012336c', 'amz-sdk-invocation-id': b'4ef95ed1-33a9-4828-a1a9-626ef62a8ae3', 'amz-sdk-request': b'attempt=1', 'Content-Length': '8388608'}>
+botocore.httpsession - DEBUG - Certificate path: /opt/homebrew/Caskroom/miniconda/base/envs/smartbakery/lib/python3.11/site-packages/certifi/cacert.pem
+urllib3.connectionpool - DEBUG - Starting new HTTPS connection (3): smartbakery.s3.amazonaws.com:443
+botocore.awsrequest - DEBUG - 100 Continue response seen, now sending request body.
+botocore.awsrequest - DEBUG - Waiting for 100 Continue response.
+botocore.awsrequest - DEBUG - Waiting for 100 Continue response.
+botocore.awsrequest - DEBUG - 100 Continue response seen, now sending request body.
+botocore.awsrequest - DEBUG - 100 Continue response seen, now sending request body.
+urllib3.connectionpool - DEBUG - https://smartbakery.s3.amazonaws.com:443 "PUT /clean_data/clean_bakery_sales.csv?uploadId=.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO&partNumber=2 HTTP/1.1" 200 0
+botocore.parsers - DEBUG - Response headers: {'x-amz-id-2': 'cZl2Uw3Y3CEMeBhhv0rU50CHycUF9usKt9VumYJAA2wmA6oApcyMX51ZEGbXRgKTntYNPU1iY9I=', 'x-amz-request-id': '2N30XGQ03RZSA2WM', 'Date': 'Sun, 19 May 2024 20:54:39 GMT', 'ETag': '"e9826776511d3ffaa870be5786eda7e2"', 'x-amz-server-side-encryption': 'AES256', 'Server': 'AmazonS3', 'Content-Length': '0'}
+botocore.parsers - DEBUG - Response body:
+b''
+botocore.hooks - DEBUG - Event needs-retry.s3.UploadPart: calling handler <botocore.retryhandler.RetryHandler object at 0x14695d550>
+botocore.retryhandler - DEBUG - No retry needed.
+botocore.hooks - DEBUG - Event needs-retry.s3.UploadPart: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x14693ba50>>
+s3transfer.utils - DEBUG - Releasing acquire 0/None
+urllib3.connectionpool - DEBUG - https://smartbakery.s3.amazonaws.com:443 "PUT /clean_data/clean_bakery_sales.csv?uploadId=.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO&partNumber=3 HTTP/1.1" 200 0
+botocore.parsers - DEBUG - Response headers: {'x-amz-id-2': 'LrhoX0Y7isD2YGVrK/D1x41DdNI0f7xf7IifuuPe0lCDiGxbJADglMG3dbPikoscSreITyPQWHE=', 'x-amz-request-id': '4MPXWPXGXD8GTRP0', 'Date': 'Sun, 19 May 2024 20:54:38 GMT', 'ETag': '"386971506c84789296bdc28089e453a2"', 'x-amz-server-side-encryption': 'AES256', 'Server': 'AmazonS3', 'Content-Length': '0'}
+botocore.parsers - DEBUG - Response body:
+b''
+botocore.hooks - DEBUG - Event needs-retry.s3.UploadPart: calling handler <botocore.retryhandler.RetryHandler object at 0x14695d550>
+botocore.retryhandler - DEBUG - No retry needed.
+botocore.hooks - DEBUG - Event needs-retry.s3.UploadPart: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x14693ba50>>
+s3transfer.utils - DEBUG - Releasing acquire 0/None
+urllib3.connectionpool - DEBUG - https://smartbakery.s3.amazonaws.com:443 "PUT /clean_data/clean_bakery_sales.csv?uploadId=.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO&partNumber=1 HTTP/1.1" 200 0
+botocore.parsers - DEBUG - Response headers: {'x-amz-id-2': 'RDoehUpyGzPnx+EmxOhkg3DOoN+PYiOKkEOwU3q5RjVZ7iIJnG+lHPQQBRyvPiUXBBWOY8n1XhA=', 'x-amz-request-id': '2N3D2DYXYB3FJ40R', 'Date': 'Sun, 19 May 2024 20:54:39 GMT', 'ETag': '"7384a178afe6ad778310fc7e7bb82cba"', 'x-amz-server-side-encryption': 'AES256', 'Server': 'AmazonS3', 'Content-Length': '0'}
+botocore.parsers - DEBUG - Response body:
+b''
+botocore.hooks - DEBUG - Event needs-retry.s3.UploadPart: calling handler <botocore.retryhandler.RetryHandler object at 0x14695d550>
+botocore.retryhandler - DEBUG - No retry needed.
+botocore.hooks - DEBUG - Event needs-retry.s3.UploadPart: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x14693ba50>>
+s3transfer.utils - DEBUG - Releasing acquire 0/None
+s3transfer.tasks - DEBUG - CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'extra_args': {}}) about to wait for <s3transfer.futures.ExecutorFuture object at 0x146970390>
+s3transfer.tasks - DEBUG - CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'extra_args': {}}) about to wait for <s3transfer.futures.ExecutorFuture object at 0x146970d90>
+s3transfer.tasks - DEBUG - CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'extra_args': {}}) done waiting for dependent futures
+s3transfer.tasks - DEBUG - Executing task CompleteMultipartUploadTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x1467edbd0>, 'bucket': 'smartbakery', 'key': 'clean_data/clean_bakery_sales.csv', 'extra_args': {}, 'upload_id': '.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO', 'parts': [{'ETag': '"7384a178afe6ad778310fc7e7bb82cba"', 'PartNumber': 1}, {'ETag': '"e9826776511d3ffaa870be5786eda7e2"', 'PartNumber': 2}, {'ETag': '"386971506c84789296bdc28089e453a2"', 'PartNumber': 3}]}
+botocore.hooks - DEBUG - Event before-parameter-build.s3.CompleteMultipartUpload: calling handler <function sse_md5 at 0x142e5ad40>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.CompleteMultipartUpload: calling handler <function validate_bucket_name at 0x142e5aca0>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.CompleteMultipartUpload: calling handler <function remove_bucket_from_url_paths_from_model at 0x142e7cea0>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.CompleteMultipartUpload: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x14693ba50>>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.CompleteMultipartUpload: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x1464f0290>>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.CompleteMultipartUpload: calling handler <function generate_idempotent_uuid at 0x142e5aac0>
+botocore.hooks - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x142e7d080>
+botocore.hooks - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x14693ba50>>
+botocore.regions - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'smartbakery', 'Region': 'us-east-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'Key': 'clean_data/clean_bakery_sales.csv', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+botocore.regions - DEBUG - Endpoint provider result: https://smartbakery.s3.amazonaws.com
+botocore.regions - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+botocore.regions - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+botocore.hooks - DEBUG - Event before-call.s3.CompleteMultipartUpload: calling handler <function add_expect_header at 0x142e5b060>
+botocore.hooks - DEBUG - Event before-call.s3.CompleteMultipartUpload: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x14695d7d0>>
+botocore.hooks - DEBUG - Event before-call.s3.CompleteMultipartUpload: calling handler <function add_recursion_detection_header at 0x142e59a80>
+botocore.hooks - DEBUG - Event before-call.s3.CompleteMultipartUpload: calling handler <function inject_api_version_header_if_needed at 0x142e7c5e0>
+botocore.endpoint - DEBUG - Making request for OperationModel(name=CompleteMultipartUpload) with params: {'url_path': '/clean_data/clean_bakery_sales.csv', 'query_string': {'uploadId': '.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO'}, 'method': 'POST', 'headers': {'User-Agent': 'Boto3/1.34.106 md/Botocore#1.34.107 ua/2.0 os/macos#23.4.0 md/arch#arm64 lang/python#3.11.9 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.107'}, 'body': b'<CompleteMultipartUpload xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Part><ETag>"7384a178afe6ad778310fc7e7bb82cba"</ETag><PartNumber>1</PartNumber></Part><Part><ETag>"e9826776511d3ffaa870be5786eda7e2"</ETag><PartNumber>2</PartNumber></Part><Part><ETag>"386971506c84789296bdc28089e453a2"</ETag><PartNumber>3</PartNumber></Part></CompleteMultipartUpload>', 'auth_path': '/smartbakery/clean_data/clean_bakery_sales.csv', 'url': 'https://smartbakery.s3.amazonaws.com/clean_data/clean_bakery_sales.csv?uploadId=.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x14693a4d0>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'smartbakery', 'params': {'Bucket': 'smartbakery', 'Key': 'clean_data/clean_bakery_sales.csv', 'UploadId': '.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO', 'MultipartUpload': {'Parts': [{'ETag': '"7384a178afe6ad778310fc7e7bb82cba"', 'PartNumber': 1}, {'ETag': '"e9826776511d3ffaa870be5786eda7e2"', 'PartNumber': 2}, {'ETag': '"386971506c84789296bdc28089e453a2"', 'PartNumber': 3}]}}}, 'input_params': {'Bucket': 'smartbakery', 'Key': 'clean_data/clean_bakery_sales.csv'}, 'signing': {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'us-east-1'}]}}}
+botocore.hooks - DEBUG - Event request-created.s3.CompleteMultipartUpload: calling handler <function signal_not_transferring at 0x1468e00e0>
+botocore.hooks - DEBUG - Event request-created.s3.CompleteMultipartUpload: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x14693a490>>
+botocore.hooks - DEBUG - Event choose-signer.s3.CompleteMultipartUpload: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x1464f0290>>
+botocore.hooks - DEBUG - Event choose-signer.s3.CompleteMultipartUpload: calling handler <function set_operation_specific_signer at 0x142e5a980>
+botocore.hooks - DEBUG - Event before-sign.s3.CompleteMultipartUpload: calling handler <function remove_arn_from_signing_path at 0x142e7cfe0>
+botocore.hooks - DEBUG - Event before-sign.s3.CompleteMultipartUpload: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x14695d7d0>>
+botocore.auth - DEBUG - Calculating signature using v4 auth.
+botocore.auth - DEBUG - CanonicalRequest:
+POST
+/clean_data/clean_bakery_sales.csv
+uploadId=.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO
+host:smartbakery.s3.amazonaws.com
+x-amz-content-sha256:faad441120eeb89961881ba22a0a58b929541bb27b5fcdc04150acaec60088ac
+x-amz-date:20240519T205444Z
+
+host;x-amz-content-sha256;x-amz-date
+faad441120eeb89961881ba22a0a58b929541bb27b5fcdc04150acaec60088ac
+botocore.auth - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240519T205444Z
+20240519/us-east-1/s3/aws4_request
+21982db88075b0388e01e07a163b7ffc78f66a17e86cb945249d9884db5f120b
+botocore.auth - DEBUG - Signature:
+26abe562bdd5397a5ac9cc9faa4f61407cd65a3e30b486648c0fe64a04a0ef3f
+botocore.hooks - DEBUG - Event request-created.s3.CompleteMultipartUpload: calling handler <function signal_transferring at 0x1468e0180>
+botocore.hooks - DEBUG - Event request-created.s3.CompleteMultipartUpload: calling handler <function add_retry_headers at 0x142e7ce00>
+botocore.endpoint - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://smartbakery.s3.amazonaws.com/clean_data/clean_bakery_sales.csv?uploadId=.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO, headers={'User-Agent': b'Boto3/1.34.106 md/Botocore#1.34.107 ua/2.0 os/macos#23.4.0 md/arch#arm64 lang/python#3.11.9 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.107', 'X-Amz-Date': b'20240519T205444Z', 'X-Amz-Content-SHA256': b'faad441120eeb89961881ba22a0a58b929541bb27b5fcdc04150acaec60088ac', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAQ3EGV3Y7DDFTHXM6/20240519/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=26abe562bdd5397a5ac9cc9faa4f61407cd65a3e30b486648c0fe64a04a0ef3f', 'amz-sdk-invocation-id': b'df07b33d-678a-495b-a6df-630c00c37bd0', 'amz-sdk-request': b'attempt=1', 'Content-Length': '357'}>
+botocore.httpsession - DEBUG - Certificate path: /opt/homebrew/Caskroom/miniconda/base/envs/smartbakery/lib/python3.11/site-packages/certifi/cacert.pem
+urllib3.connectionpool - DEBUG - https://smartbakery.s3.amazonaws.com:443 "POST /clean_data/clean_bakery_sales.csv?uploadId=.PWY_3s2eyIzlNNfqKp8uziEqA0XN48HqASwhnTP.1cn40DWIJTHWvi4cYMM7DWaJui9UX2k80fTQPHMU_0wBHX6HKR7VhJFq6LHVmnE1HxwZYLnHreBf62if6NzEpIO HTTP/1.1" 200 None
+botocore.parsers - DEBUG - Response headers: {'x-amz-id-2': 'mCVfoGePNPvGiGVCnu2zfxOic7DKaSEuqfzwQu5h8QtJefbe9KRbf3Vp1JuEfmvjj0vR+K2GE9E=', 'x-amz-request-id': 'GM968AHAXCY6703J', 'Date': 'Sun, 19 May 2024 20:54:46 GMT', 'x-amz-server-side-encryption': 'AES256', 'Content-Type': 'application/xml', 'Transfer-Encoding': 'chunked', 'Server': 'AmazonS3'}
+botocore.parsers - DEBUG - Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n\n<CompleteMultipartUploadResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Location>https://smartbakery.s3.amazonaws.com/clean_data%2Fclean_bakery_sales.csv</Location><Bucket>smartbakery</Bucket><Key>clean_data/clean_bakery_sales.csv</Key><ETag>"d7ccc054042d5e53ac6e89ce37e3da95-3"</ETag></CompleteMultipartUploadResult>'
+botocore.hooks - DEBUG - Event needs-retry.s3.CompleteMultipartUpload: calling handler <function check_for_200_error at 0x142e5a840>
+botocore.hooks - DEBUG - Event needs-retry.s3.CompleteMultipartUpload: calling handler <botocore.retryhandler.RetryHandler object at 0x14695d550>
+botocore.retryhandler - DEBUG - No retry needed.
+botocore.hooks - DEBUG - Event needs-retry.s3.CompleteMultipartUpload: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x14693ba50>>
+s3transfer.utils - DEBUG - Releasing acquire 0/None
+root - INFO - Archivo Parquet clean_data/clean_bakery_sales.csv subido correctamente a S3 en smartbakery
+boto3.s3.transfer - DEBUG - Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+boto3.s3.transfer - DEBUG - Using default client. pid: 54127, thread: 8463432384
+s3transfer.utils - DEBUG - Acquiring 0
+s3transfer.tasks - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x146989c90>}) about to wait for the following futures []
+s3transfer.tasks - DEBUG - UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x146989c90>}) done waiting for dependent futures
+s3transfer.tasks - DEBUG - Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x146989c90>}) with kwargs {'client': <botocore.client.S3 object at 0x1467edbd0>, 'config': <boto3.s3.transfer.TransferConfig object at 0x142f69f90>, 'osutil': <s3transfer.utils.OSUtils object at 0x141f62e90>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x142ee3c10>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x146989c90>}
+s3transfer.futures - DEBUG - Submitting task PutObjectTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/TempTot.csv', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x142ee3c10> for transfer request: 0.
+s3transfer.utils - DEBUG - Acquiring 0
+s3transfer.tasks - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/TempTot.csv', 'extra_args': {}}) about to wait for the following futures []
+s3transfer.utils - DEBUG - Releasing acquire 0/None
+s3transfer.tasks - DEBUG - PutObjectTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/TempTot.csv', 'extra_args': {}}) done waiting for dependent futures
+s3transfer.tasks - DEBUG - Executing task PutObjectTask(transfer_id=0, {'bucket': 'smartbakery', 'key': 'clean_data/TempTot.csv', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x1467edbd0>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x14695d9d0>, 'bucket': 'smartbakery', 'key': 'clean_data/TempTot.csv', 'extra_args': {}}
+botocore.hooks - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x142e5ba60>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x142e5ad40>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x142e7c4a0>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x142e5aca0>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x142e7cea0>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x14693ba50>>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x1464f0290>>
+botocore.hooks - DEBUG - Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x142e5aac0>
+botocore.hooks - DEBUG - Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x142e7d080>
+botocore.hooks - DEBUG - Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x14693ba50>>
+botocore.regions - DEBUG - Calling endpoint provider with parameters: {'Bucket': 'smartbakery', 'Region': 'us-east-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'Key': 'clean_data/TempTot.csv', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+botocore.regions - DEBUG - Endpoint provider result: https://smartbakery.s3.amazonaws.com
+botocore.regions - DEBUG - Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+botocore.regions - DEBUG - Selected auth type "v4" as "v4" with signing context params: {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+botocore.hooks - DEBUG - Event before-call.s3.PutObject: calling handler <function conditionally_calculate_checksum at 0x142b9c7c0>
+botocore.hooks - DEBUG - Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x142e5b060>
+botocore.handlers - DEBUG - Adding expect 100 continue header to request.
+botocore.hooks - DEBUG - Event before-call.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x14695d7d0>>
+botocore.hooks - DEBUG - Event before-call.s3.PutObject: calling handler <function add_recursion_detection_header at 0x142e59a80>
+botocore.hooks - DEBUG - Event before-call.s3.PutObject: calling handler <function inject_api_version_header_if_needed at 0x142e7c5e0>
+botocore.endpoint - DEBUG - Making request for OperationModel(name=PutObject) with params: {'url_path': '/clean_data/TempTot.csv', 'query_string': {}, 'method': 'PUT', 'headers': {'User-Agent': 'Boto3/1.34.106 md/Botocore#1.34.107 ua/2.0 os/macos#23.4.0 md/arch#arm64 lang/python#3.11.9 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.107', 'Content-MD5': 'VUgA2rFJ/a8CxhwZI236Dw==', 'Expect': '100-continue'}, 'body': <s3transfer.utils.ReadFileChunk object at 0x14695d9d0>, 'auth_path': '/smartbakery/clean_data/TempTot.csv', 'url': 'https://smartbakery.s3.amazonaws.com/clean_data/TempTot.csv', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x14693a4d0>, 'has_streaming_input': True, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'smartbakery', 'params': {'Bucket': 'smartbakery', 'Key': 'clean_data/TempTot.csv', 'Body': <s3transfer.utils.ReadFileChunk object at 0x14695d9d0>}}, 'input_params': {'Bucket': 'smartbakery', 'Key': 'clean_data/TempTot.csv'}, 'signing': {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'us-east-1'}]}}}
+botocore.hooks - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_not_transferring at 0x1468e00e0>
+botocore.hooks - DEBUG - Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x14693a490>>
+botocore.hooks - DEBUG - Event choose-signer.s3.PutObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x1464f0290>>
+botocore.hooks - DEBUG - Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x142e5a980>
+botocore.hooks - DEBUG - Event before-sign.s3.PutObject: calling handler <function remove_arn_from_signing_path at 0x142e7cfe0>
+botocore.hooks - DEBUG - Event before-sign.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x14695d7d0>>
+botocore.auth - DEBUG - Calculating signature using v4 auth.
+botocore.auth - DEBUG - CanonicalRequest:
+PUT
+/clean_data/TempTot.csv
+
+content-md5:VUgA2rFJ/a8CxhwZI236Dw==
+host:smartbakery.s3.amazonaws.com
+x-amz-content-sha256:UNSIGNED-PAYLOAD
+x-amz-date:20240519T205445Z
+
+content-md5;host;x-amz-content-sha256;x-amz-date
+UNSIGNED-PAYLOAD
+botocore.auth - DEBUG - StringToSign:
+AWS4-HMAC-SHA256
+20240519T205445Z
+20240519/us-east-1/s3/aws4_request
+54370690f18817154900ddcb870c8625e0e1b57c561d86f213629065fd6641a0
+botocore.auth - DEBUG - Signature:
+c88202d5d6babd2111e0aba0287a29c3e59288d9c39fbace593ce3d230278dd2
+botocore.hooks - DEBUG - Event request-created.s3.PutObject: calling handler <function signal_transferring at 0x1468e0180>
+botocore.hooks - DEBUG - Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x142e7ce00>
+botocore.endpoint - DEBUG - Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://smartbakery.s3.amazonaws.com/clean_data/TempTot.csv, headers={'User-Agent': b'Boto3/1.34.106 md/Botocore#1.34.107 ua/2.0 os/macos#23.4.0 md/arch#arm64 lang/python#3.11.9 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.107', 'Content-MD5': b'VUgA2rFJ/a8CxhwZI236Dw==', 'Expect': b'100-continue', 'X-Amz-Date': b'20240519T205445Z', 'X-Amz-Content-SHA256': b'UNSIGNED-PAYLOAD', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAQ3EGV3Y7DDFTHXM6/20240519/us-east-1/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=c88202d5d6babd2111e0aba0287a29c3e59288d9c39fbace593ce3d230278dd2', 'amz-sdk-invocation-id': b'fd99c085-21c6-4e4c-97c6-9e3e5c4abc7d', 'amz-sdk-request': b'attempt=1', 'Content-Length': '10831'}>
+botocore.httpsession - DEBUG - Certificate path: /opt/homebrew/Caskroom/miniconda/base/envs/smartbakery/lib/python3.11/site-packages/certifi/cacert.pem
+botocore.awsrequest - DEBUG - Waiting for 100 Continue response.
+botocore.awsrequest - DEBUG - 100 Continue response seen, now sending request body.
+urllib3.connectionpool - DEBUG - https://smartbakery.s3.amazonaws.com:443 "PUT /clean_data/TempTot.csv HTTP/1.1" 200 0
+botocore.parsers - DEBUG - Response headers: {'x-amz-id-2': 'y6+ngrD1b1jFNiM3qjnu8qKR3BK5tZ17uJElt7u6Yq5KFDEBQMdeYCSV/BEYhlfwlR+GxIK//wE=', 'x-amz-request-id': 'GM9EM8WP4619X8JK', 'Date': 'Sun, 19 May 2024 20:54:46 GMT', 'x-amz-server-side-encryption': 'AES256', 'ETag': '"554800dab149fdaf02c61c19236dfa0f"', 'Server': 'AmazonS3', 'Content-Length': '0'}
+botocore.parsers - DEBUG - Response body:
+b''
+botocore.hooks - DEBUG - Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x14695d550>
+botocore.retryhandler - DEBUG - No retry needed.
+botocore.hooks - DEBUG - Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x14693ba50>>
+s3transfer.utils - DEBUG - Releasing acquire 0/None
+root - INFO - Archivo Parquet clean_data/TempTot.csv subido correctamente a S3 en smartbakery
