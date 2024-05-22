@@ -66,17 +66,26 @@ if __name__ == "__main__":
             logging.debug("Datos preprocesados con %d filas y %d columnas",
                           data.shape[0], data.shape[1])
             logging.info("Los datos fueron preprocesados correctamente")
-    # Read inputs
-    logging.info("Empezando la unión de bakery con temperatura ...")
-    data_u, df_menu = merge_data(data, output_prep_data="data/clean_data/data_bakery_prep.csv")
-    if data_u is not None:
-        logging.debug("Datos unidos con %d filas y %d columnas",
-                      data_u.shape[0], data_u.shape[1])
-        logging.info("Los datos fueron unidos correctamente")
-    # Dividir información en train, test y validation
-    logging.info("Empezando la división de los datos ...")
-    split_data(data_u, df_menu, output_split_data="data/clean_data/")
-    logging.info("Los datos fueron divididos correctamente")
-    logging.info("Fin del preproceso")
-    logging.info("Los datos se encuentran en la carpeta 'data/clean_data/'")
-    logging.info("Los logs se encuentran en la carpeta 'logs/'")
+
+            # Read inputs
+            logging.info("Empezando la unión de bakery con temperatura ...")
+            result = merge_data(f"{args.output_prep}/data_bakery_prep.csv", output_prep_data="data/clean_data/data_bakery_prep.csv")
+            if result is not None:
+                data_u, df_menu = result
+                logging.debug("Datos unidos con %d filas y %d columnas",
+                              data_u.shape[0], data_u.shape[1])
+                logging.info("Los datos fueron unidos correctamente")
+
+                # Dividir información en train, test y validation
+                logging.info("Empezando la división de los datos ...")
+                split_data(data_u, df_menu, output_split_data="data/clean_data/")
+                logging.info("Los datos fueron divididos correctamente")
+                logging.info("Fin del preproceso")
+                logging.info("Los datos se encuentran en la carpeta 'data/clean_data/'")
+                logging.info("Los logs se encuentran en la carpeta 'logs/'")
+            else:
+                logging.error("La unión de datos falló.")
+        else:
+            logging.error("El preprocesamiento de datos falló.")
+    else:
+        logging.error("La carga de datos falló.")

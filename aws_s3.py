@@ -27,7 +27,6 @@ logging.basicConfig(
     format='%(name)s - %(levelname)s - %(message)s')
 
 
-
 try:
     # Credenciales de AWS
     VAR_KEY_ID = 'XXXXXXXXXXX'
@@ -36,15 +35,18 @@ try:
 
     # Set the S3 bucket name and file name
     BUCKET_NAME = 'smartbakery'
-    CSV_FILE_NAME = './data/prep/data_bakery_prep.csv'
+    CSV_FN_BAKERY = './data/clean_data/data_bakery_prep.csv'
+    CSV_TRAIN = './data/clean_data/train.csv'
+    CSV_TEST = './data/clean_data/test.csv'
+    CSV_VAL = './data/clean_data/val.csv'
     CSV_FILE_NAME_OUT = 'clean_data/clean_bakery_sales.csv'
     CSV_TEMP = './data/raw/TempTot.csv'
     CSV_TEMP_OUT = 'clean_data/TempTot.csv'
     logging.info("Nombre del bucket y archivo definidos correctamente")
 
     # Read the CSV file
-    df = pd.read_csv(CSV_FILE_NAME)
-    logging.info("Archivo CSV %s cargado correctamente", CSV_FILE_NAME)
+    df = pd.read_csv(CSV_FN_BAKERY)
+    logging.info("Archivo CSV %s cargado correctamente", CSV_FN_BAKERY)
 
     # Create an S3 client
     s3 = boto3.client('s3',
@@ -52,19 +54,40 @@ try:
                       aws_secret_access_key=VAR_ACCESS_KEY)
     logging.info("Cliente S3 creado correctamente")
 
-    # Upload the Parquet file to S3
-    s3.upload_file(CSV_FILE_NAME,
+    # Upload the CSV file to S3
+    s3.upload_file(CSV_FN_BAKERY,
                    BUCKET_NAME, CSV_FILE_NAME_OUT)
     logging.info(
-        "Archivo Parquet %s subido correctamente a S3 en %s",
+        "Archivo csv %s subido correctamente a S3 en %s",
         CSV_FILE_NAME_OUT, BUCKET_NAME)
     
-    # Upload the Parquet file to S3
+    # Upload the CSV file to S3
     s3.upload_file(CSV_TEMP,
                    BUCKET_NAME, CSV_TEMP_OUT)
     logging.info(
-        "Archivo Parquet %s subido correctamente a S3 en %s",
+        "Archivo csv %s subido correctamente a S3 en %s",
         CSV_TEMP_OUT, BUCKET_NAME)
+    
+    # Upload the CSV file to S3
+    s3.upload_file(CSV_TRAIN,
+                   BUCKET_NAME, CSV_FILE_NAME_OUT)
+    logging.info(
+        "Archivo csv %s subido correctamente a S3 en %s",
+        CSV_FILE_NAME_OUT, BUCKET_NAME)
+    
+    # Upload the CSV file to S3
+    s3.upload_file(CSV_TEST,
+                   BUCKET_NAME, CSV_FILE_NAME_OUT)
+    logging.info(
+        "Archivo csv %s subido correctamente a S3 en %s",
+        CSV_FILE_NAME_OUT, BUCKET_NAME)
+    
+    # Upload the CSV file to S3
+    s3.upload_file(CSV_VAL,
+                   BUCKET_NAME, CSV_FILE_NAME_OUT)
+    logging.info(
+        "Archivo csv %s subido correctamente a S3 en %s",
+        CSV_FILE_NAME_OUT, BUCKET_NAME)
 
 except FileNotFoundError as e:
     logging.error("Archivo no encontrado: %s", e)
