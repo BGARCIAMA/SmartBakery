@@ -1,0 +1,25 @@
+root - INFO - Empezando el preproceso ...
+root - DEBUG - Rutas de los datos: ./data/raw/Bakery_Sales.csv, ./data/prep
+root - INFO - Cargando los datos ...
+root - INFO - La base data_bakery_sales fue cargada correctamente
+root - DEBUG - Datos cargados con 234005 filas y 7 columnas
+root - INFO - Los datos fueron cargados correctamente
+root - INFO - Preprocesando los datos ...
+root - INFO - Los datos fueron cargados correctamente desde ./data/raw/Bakery_Sales.csv
+root - INFO - Los datos fueron preprocesados y guardados en ./data/prep/data_bakery_prep.csv
+root - DEBUG - Datos preprocesados con 232677 filas y 14 columnas
+root - INFO - Los datos fueron preprocesados correctamente
+root - INFO - Empezando la unión de bakery con temperatura ...
+root - INFO - Los datos de bakery y temperatura fueron unidos y guardados en data/clean_data/data_bakery_prep.csv
+root - DEBUG - Datos unidos con 29181 filas y 6 columnas
+root - INFO - Los datos fueron unidos correctamente
+root - INFO - Empezando la división de los datos ...
+root - INFO - Tamaño del conjunto de entrenamiento: 16340
+root - INFO - Tamaño del conjunto de validación: 7004
+root - INFO - Tamaño del conjunto de prueba: 5837
+root - INFO - Tamaño del conjunto de menú: 147
+root - INFO - Los datos fueron divididos y guardados en data/clean_data/
+root - INFO - Los datos fueron divididos correctamente
+root - INFO - Fin del preproceso
+root - INFO - Los datos se encuentran en la carpeta 'data/clean_data/'
+root - INFO - Los logs se encuentran en la carpeta 'logs/'

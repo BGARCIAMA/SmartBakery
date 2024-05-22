@@ -1,4 +1,6 @@
-'''
+# src/scripts_prep.py
+
+"""
 Este módulo es un script que provee
 las funciones que se emplean en el
 script de:
@@ -6,9 +8,12 @@ script de:
 
 El índice de las funciones es el siguiente:
 * load_data
-* day_time
+* classify_day_time
 * preprocess_data
-'''
+* merge_data
+* split_data
+"""
+
 # Se importan las librerías necesarias
 import os
 import logging
@@ -30,6 +35,7 @@ logging.basicConfig(
     format='%(name)s - %(levelname)s - %(message)s'
 )
 
+
 def load_data(data_bakery_sales):
     '''
     Esta función se encarga de cargar los datos
@@ -38,12 +44,12 @@ def load_data(data_bakery_sales):
     DataFrame de pandas.
 
     Parameters:
-    input_data (str): Ruta del archivo de
-                            datos de entrada en formato .csv.
+    data_bakery_sales (str): Ruta del archivo de
+                             datos de entrada en formato .csv.
 
     Returns:
     data (DataFrame): DataFrame de pandas que contiene
-                    los datos de entrada en formato .csv.
+                      los datos de entrada en formato .csv.
     '''
     try:
         # Leer datos de entrada .csv
@@ -56,7 +62,7 @@ def load_data(data_bakery_sales):
         assert len(data) == len(pd.read_csv(data_bakery_sales))
         return data
     except (FileNotFoundError, pd.errors.EmptyDataError) as exc:
-        print(f"Ocurrió un error con la lectura del archivo: {exc}")
+        logging.error("Ocurrió un error con la lectura del archivo: %s", exc)
         return None
 
 
@@ -85,16 +91,17 @@ def preprocess_data(input_data,
     Parámetros:
     input_data (str): la ruta al archivo de datos de entrada en formato CSV.
     output_prep_data (str): la ruta para guardar los datos
-    preprocesados en formato CSV. El valor predeterminado
-    es "data/prep/data_prep.csv".
+                            preprocesados en CSV. El valor predeterminado
+                            es "data/prep/data_prep.csv".
     Salida:
     pandas.DataFrame: los datos preprocesados con variables seleccionadas.
     """
     try:
         # Cargar datos desde el archivo CSV
         data = pd.read_csv(input_data)
-        logging.info("Los datos fueron cargados correctamente desde %s",
-                     input_data)
+        logging.info(
+            "Los datos fueron cargados correctamente desde %s", input_data
+        )
         # Renombra columnas
         df_raw = data.rename(columns={'date': 'Date',
                                       'time': 'Time',
@@ -149,15 +156,18 @@ def preprocess_data(input_data,
         ].reset_index(drop=True)
         # Guardar el resultado en un nuevo archivo CSV
         df_raw.to_csv(output_prep_data, index=False)
-        logging.info("Los datos fueron preprocesados y guardados en %s",
-                     output_prep_data)
+        logging.info(
+            "Los datos fueron preprocesados y guardados en %s",
+            output_prep_data
+        )
         return df_raw
     except pd.errors.ParserError as e:
         logging.error("Error en el preprocesamiento de los datos: %s", e)
         return None
 
 
-def merge_data(input_data_path, output_prep_data="data/clean_data/data_bakery_prep.csv"):
+def merge_data(input_data_path,
+               output_prep_data="data/clean_data/data_bakery_prep.csv"):
     """
     Esta función se encarga de tomar los datos preprocesados
     de ventas y clima, y realizar las siguientes tareas:
@@ -178,35 +188,48 @@ def merge_data(input_data_path, output_prep_data="data/clean_data/data_bakery_pr
         df_menu = df_menu.drop_duplicates(subset=['Menu_Code', 'Menu'])
 
         # Ruta al archivo de datos de temperatura
-        WEATHER_DATA_PATH = './data/raw_data/TempTot.csv'
-        if not os.path.exists(WEATHER_DATA_PATH):
-            logging.error(f"El archivo {WEATHER_DATA_PATH} no se encuentra.")
-            return None
+        weather_data_path = 'data/raw/TempTot.csv'
+        if not os.path.exists(weather_data_path):
+            logging.error("El archivo %s no se encuentra.", weather_data_path)
+            return None, None
 
         # Leer datos de Temperatura
-        weather_df = pd.read_csv(WEATHER_DATA_PATH)
+        weather_df = pd.read_csv(weather_data_path)
         # Convertir la columna 'Fecha' a formato datetime
-        weather_df['Fecha'] = pd.to_datetime(weather_df['Fecha'], format='%d/%m/%y')
+        weather_df['Fecha'] = pd.to_datetime(
+            weather_df['Fecha'], format='%d/%m/%y')
         # Unir los DataFrames de ventas y clima
-        df_joined = pd.merge(bakery_df, weather_df, left_on='Date', right_on='Fecha', how='left')
+        df_joined = pd.merge(
+            bakery_df, weather_df, left_on='Date', right_on='Fecha', how='left'
+        )
         # Eliminar columnas innecesarias
-        df_joined = df_joined[['Quantity', 'Year', 'Month', 'Day', 'Avg_temp', 'Menu_Code']]
-        df_grouped = df_joined.groupby(['Year', 'Month', 'Day', 'Avg_temp', 'Menu_Code']).agg({'Quantity': 'sum'}).reset_index()
+        df_joined = df_joined[
+            ['Quantity', 'Year', 'Month', 'Day', 'Avg_temp', 'Menu_Code']
+        ]
+        df_grouped = df_joined.groupby(
+            ['Year', 'Month', 'Day', 'Avg_temp', 'Menu_Code']
+        ).agg({'Quantity': 'sum'}).reset_index()
         # Reordenar las columnas
-        df_grouped = df_grouped[['Quantity', 'Year', 'Month', 'Day', 'Avg_temp', 'Menu_Code']]
+        df_grouped = df_grouped[
+            ['Quantity', 'Year', 'Month', 'Day', 'Avg_temp', 'Menu_Code']
+        ]
         # Guardar el resultado en un nuevo archivo CSV
         df_grouped.to_csv(output_prep_data, index=False)
-        logging.info(f"Los datos de bakery y temperatura fueron unidos y guardados en {output_prep_data}")
+        logging.info(
+            "Los datos de bakery y temp fueron unidos y guardados en %s",
+            output_prep_data
+        )
         return df_grouped, df_menu
     except pd.errors.ParserError as e:
-        logging.error(f"Error en el preprocesamiento de los datos: {e}")
-        return None
+        logging.error("Error en el preprocesamiento de los datos: %s", e)
+        return None, None
     except FileNotFoundError as e:
         logging.error(e)
-        return None
+        return None, None
 
 
-def split_data(path_df_grouped, df_menu, output_split_data="data/clean_data/"):
+def split_data(path_df_grouped, df_menu,
+               output_split_data="data/clean_data/"):
     """
     Esta función se encarga de tomar los datos preprocesados
     de ventas y clima, y realizar las siguientes tareas:
@@ -215,25 +238,30 @@ def split_data(path_df_grouped, df_menu, output_split_data="data/clean_data/"):
     """
     try:
         # Dividir el conjunto de datos en entrenamiento (80%) y prueba (20%)
-        train_df, test_df = train_test_split(path_df_grouped, test_size=0.2, random_state=42)
-        # Dividir el conjunto de datos de entrenamiento en entrenamiento (70%) y validación (30%)
-        train_df, val_df = train_test_split(train_df, test_size=0.3, random_state=42)
+        train_df, test_df = train_test_split(
+            path_df_grouped, test_size=0.2, random_state=42
+        )
+        # Dividir el conjunto de datos train (70%) y validación (30%)
+        train_df, val_df = train_test_split(
+            train_df, test_size=0.3, random_state=42
+        )
         # Longitud de cada conjunto de datos
         len_train = len(train_df)
         len_val = len(val_df)
         len_test = len(test_df)
         len_menu = len(df_menu)
         # Imprimir la longitud de cada conjunto de datos
-        logging.info(f"Tamaño del conjunto de entrenamiento: {len_train}")
-        logging.info(f"Tamaño del conjunto de validación: {len_val}")
-        logging.info(f"Tamaño del conjunto de prueba: {len_test}")
-        logging.info(f"Tamaño del conjunto de menú: {len_menu}")
+        logging.info("Tamaño del conjunto de entrenamiento: %d", len_train)
+        logging.info("Tamaño del conjunto de validación: %d", len_val)
+        logging.info("Tamaño del conjunto de prueba: %d", len_test)
+        logging.info("Tamaño del conjunto de menú: %d", len_menu)
         # Convertir los DataFrames a formato CSV
         train_df.to_csv(f'{output_split_data}train.csv', index=False)
         val_df.to_csv(f'{output_split_data}val.csv', index=False)
         test_df.to_csv(f'{output_split_data}test.csv', index=False)
         df_menu.to_csv(f'{output_split_data}menu_codes.csv', index=False)
-        logging.info(f"Los datos fueron divididos y guardados en {output_split_data}")
+        logging.info(
+            "Los datos fueron divididos y guardados en %s", output_split_data
+        )
     except pd.errors.ParserError as e:
-        logging.error(f"Error en el preprocesamiento de los datos: {e}")
-        return None
+        logging.error("Error en el preprocesamiento de los datos: %s", e)
