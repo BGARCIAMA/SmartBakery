@@ -92,10 +92,9 @@ Los documentos que conforman el working backwards, donde se detalla el proceso y
   2. **Configuración**: Configura las credenciales de acceso a la base de datos y las APIs necesarias.
   3. **Ejecución**:
     - Correr los scripts en el siguiente orden:
-      1. [prep.py](prep.py) 
+      1. [prep_split_data.py](prep_split_data.py) 
       2. [aws_s3.py](aws_s3.py) (AWS S3)
-      3. [data_prep_bakery.py](data_prep_bakery.py) (AWS Sagemaker)
-      4. [bakery_reg_endpoint.ipynb](bakery_reg_endpoint.ipynb)
+      3. [bakery_reg_endpoint.ipynb](bakery_reg_endpoint.ipynb)
 
 
 ### Qué tipo de analítica utilizaron
