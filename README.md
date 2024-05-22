@@ -1,7 +1,7 @@
 # Proyecto Producto de Datos
 # SmartBakery
 
-![](https://github.com/YunPerez/MGE_Bakery_Forecast/blob/main/imgs/SmartBakery.jpg)
+![](https://github.com/BGARCIAMA/mge_bakery_forecast/blob/main/imgs/SmartBakery.jpg)
          
 # (MCD ITAM Primavera 2024)
 
@@ -17,7 +17,7 @@
 
 
 ## Contexto  🧠
-![](https://github.com/YunPerez/MGE_Bakery_Forecast/blob/main/imgs/logo.png)
+![](https://github.com/BGARCIAMA/mge_bakery_forecast/blob/main/imgs/logo.png)
  
 En el competitivo mercado de la panadería, la gestión eficiente del inventario es crucial para maximizar las ganancias y garantizar la satisfacción del cliente. Muchas panaderías enfrentan desafíos significativos, como la predicción inexacta de la demanda, el desperdicio de productos y la falta de disponibilidad de artículos populares.
  
@@ -30,13 +30,13 @@ El objetivo de SmartBakery es construir un producto de datos que optimice el inv
 
 ## Contenido
 
-- [Working Backwards en PDF](working_backwards) Los 3 documentos que conforman el working backwards, donde se detalla el proceso y la oferta de valor de SmartBakery, se encuestran en esta sección.
+- [Working Backwards en PDF](working_backwards) Los documentos que conforman el working backwards, donde se detalla el proceso y la oferta de valor de SmartBakery, se encuestran en esta sección.
 
-- [Press Release](working_backwards/01_PressRelease_SmartBakery.pdf) Aquí puedes leer el comunicado de prensa que describe la propuesta de valor y los beneficios de SmartBakery. [Leer Press Release](working_backwards/01_PressRelease_SmartBakery.pdf)
+- [Press Release](working_backwards/01_PressRelease_SmartBakery.pdf) Aquí puedes leer el comunicado de prensa que describe la propuesta de valor y los beneficios de SmartBakery.
 
-- [Cinco preguntas alrededor del cliente](working_backwards/02_5Quest_SmartBakery.pdf) Respondemos a las cinco preguntas críticas para entender las necesidades y expectativas de nuestros clientes. [Leer Documento](working_backwards/02_5Quest_SmartBakery.pdf)
+- [Cinco preguntas alrededor del cliente](working_backwards/02_5Quest_SmartBakery.pdf) Respondemos a las cinco preguntas críticas para entender las necesidades y expectativas de nuestros clientes.
 
-- [Boceto de la solución](#boceto-de-la-solución) El boceto muestra la solución final de SmartBakery, detallando las iteraciones realizadas para llegar al producto final. [Ver Boceto](link-al-boceto)
+- [Boceto de la solución](#boceto-de-la-solución) El boceto muestra la solución final de SmartBakery, detallando las iteraciones realizadas para llegar al producto final.
 
 - [FAQ](working_backwards/03_FAQ_SmartBakery.pdf) Respondemos las preguntas más frecuentes de nuestros clientes.
 
@@ -111,4 +111,4 @@ El costo estimado para implementar y mantener SmartBakery durante un año incluy
 - **Total**: $38,000 MXN
  
 ## Diagrama de la solución
-El siguiente diagrama muestra cada uno de los componentes de SmartBakery y cómo están interrelacionados. ![Ver Diagrama](https://github.com/Garcia889/mge_bakery_forecast/blob/main/imgs/SmartBakery.png)
+El siguiente diagrama muestra cada uno de los componentes de SmartBakery y cómo están interrelacionados. ![Ver Diagrama](https://github.com/BGARCIAMA/mge_bakery_forecast/blob/main/imgs/SmartBakery.png)
