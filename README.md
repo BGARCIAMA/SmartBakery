@@ -30,7 +30,7 @@ El objetivo de SmartBakery es construir un producto de datos que optimice el inv
 
 ## Contenido
 
-* [Working Backwards en PDF](working_backwards/00_Working backwards_SmartBakery.pdf)
+* [Working Backwards en PDF](working_backwards/00_WorkingBackwards_SmartBakery.pdf)
 Los documentos que conforman el working backwards, donde se detalla el proceso y la oferta de valor de SmartBakery, se encuestran en esta sección:
 
   - **Press Release**
