@@ -29,8 +29,8 @@ logging.basicConfig(
 )
 
 # Credenciales de AWS
-VAR_KEY_ID = 'XXXXXXXXXXXXXXXXXXXX'
-VAR_ACCESS_KEY = 'XXXXXXXXXXXXXXXXXX'
+VAR_KEY_ID = ''
+VAR_ACCESS_KEY = ''
 logging.info("Credenciales de AWS cargadas correctamente")
 
 # Set the S3 bucket name and file names
