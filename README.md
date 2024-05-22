@@ -128,37 +128,37 @@ https://us-east-1.quicksight.aws.amazon.com/sn/accounts/058264510014/dashboards/
 ## Estructura del repositorio  📂
 ```
 .
-├── EDA
-│   └── EDA_Bakery.ipynb
-├── README.md
-├── aws_s3.py
-├── bakery_reg_endpoint.ipynb
-├── config.yaml
-├── data
-│   ├── prep
-│   │   └── data_bakery_prep.csv
-│   └── raw
-│       ├── Bakery_Sales.csv
-│       └── TempTot.csv
-├── environment.yml
-├── imgs
-│   ├── Costos_SmartBakery.png
-│   ├── SmartBakery.jpg
-│   ├── Arq_SmartBakery.png
-│   ├── Vista_Previa_SB.png
-│   ├── boceto_SmartBakery.png
-│   └── logo.png
-├── logs
-├── prep_previo.py
-├── prep_split_data.py
-├── smartbakerypred.json
-├── src
-│   ├── __pycache__
-│   │   └── scripts_prep.cpython-311.pyc
-│   └── scripts_prep.py
-└── working_backwards
-    ├── 00_WorkingBackwards_SmartBakery.pdf
-    ├── 01_PressRelease_SmartBakery.pdf
-    ├── 02_5Quest_SmartBakery.pdf
-    └── 03_FAQ_SmartBakery.pdf
+├── ./EDA
+│   └── ./EDA/EDA_Bakery.ipynb
+├── ./README.md
+├── ./aws_s3.py
+├── ./bakery_reg_endpoint.ipynb
+├── ./config.yaml
+├── ./data
+│   ├── ./data/clean_data
+│   ├── ./data/prep
+│   └── ./data/raw
+├── ./environment.yml
+├── ./imgs
+│   ├── ./imgs/Arq_SmartBakery.png
+│   ├── ./imgs/Costos_SmartBakery.png
+│   ├── ./imgs/SmartBakery.jpg
+│   ├── ./imgs/SmartBakery.png
+│   ├── ./imgs/Vista_Previa_SB.png
+│   ├── ./imgs/boceto_SmartBakery.png
+│   └── ./imgs/logo.png
+├── ./logs
+│   ├── ./logs/20240519_145437_s3.log
+│   ├── ./logs/20240522_161038_prep.log
+│   └── ./logs/20240522_171853_s3.log
+├── ./prep_split_data.py
+├── ./smartbakerypred.json
+├── ./src
+│   └── ./src/scripts_prep.py
+└── ./working_backwards
+    ├── ./working_backwards/00_WorkingBackwards_SmartBakery.pdf
+    ├── ./working_backwards/01_PressRelease_SmartBakery.pdf
+    ├── ./working_backwards/02_5Quest_SmartBakery.pdf
+    ├── ./working_backwards/03_FAQ_SmartBakery.pdf
+    └── ./working_backwards/04_Arquitectura_SmartBakery.pdf
 ```
