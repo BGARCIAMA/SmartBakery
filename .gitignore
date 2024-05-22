@@ -1,0 +1,11 @@
+# Se agregan los directorios de datos
+# para ser ignorados por git
+raw_data/
+clean_data/
+data/prep/
+data/clean_data/
+data/raw/
+__pycache__/
+EDA/.ipynb_checkpoints/
+src/__pycache__/
+.DS_Store
