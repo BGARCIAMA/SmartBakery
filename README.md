@@ -94,7 +94,7 @@ Los documentos que conforman el working backwards, donde se detalla el proceso y
     - Correr los scripts en el siguiente orden:
       1. [prep_split_data.py](prep_split_data.py) 
       2. [aws_s3.py](aws_s3.py) (AWS S3)
-      3. [bakery_reg_endpoint.ipynb](bakery_reg_endpoint.ipynb)
+      3. [bakery_reg_endpoint.ipynb](bakery_reg_endpoint.ipynb) (AWS Sagemaker)
 
 
 ### Qué tipo de analítica utilizaron
