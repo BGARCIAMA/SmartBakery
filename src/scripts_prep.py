@@ -15,6 +15,7 @@ import os
 import warnings
 from datetime import datetime
 import pandas as pd
+from sklearn.model_selection import train_test_split
 
 # Se configura el logging
 if not os.path.exists("logs/"):
@@ -152,6 +153,92 @@ def preprocess_data(input_data,
         logging.info("Los datos fueron preprocesados y guardados en %s",
                      output_prep_data)
         return df_raw
+    except pd.errors.ParserError as e:
+        logging.error("Error en el preprocesamiento de los datos: %s", e)
+        return None
+
+
+def merge_data(input_data_path,
+                    output_prep_data="data/clean_data/data_bakery_prep.csv"):
+    """
+    Esta función se encarga de tomar los datos preprocesados
+    de ventas y clima, y realizar las siguientes tareas:
+    1. Unir los datos de ventas y clima.
+    2. Agrupar los datos por año, mes, día,
+       temperatura promedio y código de menú.
+    3. Guardar los datos en un nuevo archivo CSV.
+    """
+    try:
+        bakery_df = pd.read_csv(input_data_path)
+        # Convertir la columna 'Date' a formato datetime
+        bakery_df['Date'] = pd.to_datetime(bakery_df['Date'])
+        bakery_df['Month'] = bakery_df['Month'].str.replace('-', '')
+        # Convertir la columna 'Menu' a formato numerico
+        bakery_df['Menu_Code'] = pd.Categorical(bakery_df['Menu']).codes
+        # Crear un DataFrame con los códigos de menú
+        df_menu = bakery_df[['Menu_Code', 'Menu', 'Price']]
+        df_menu = df_menu.drop_duplicates(subset=['Menu_Code', 'Menu'])
+        # Leer datos de Temperatura
+        WEATHER_DATA_PATH = './data/raw_data/TempTot.csv'
+        weather_df = pd.read_csv(WEATHER_DATA_PATH)
+        # Convertir la columna 'Fecha' a formato datetime
+        weather_df['Fecha'] = pd.to_datetime(weather_df['Fecha'], format='%d/%m/%y')
+        # Unir los DataFrames de ventas y clima
+        df_joined = pd.merge(bakery_df,
+                            weather_df, left_on='Date',
+                            right_on='Fecha', how='left')
+        # Eliminar columnas innecesarias
+        df_joined = df_joined[[
+            'Quantity', 'Year', 'Month', 'Day', 'Avg_temp', 'Menu_Code']]
+        df_grouped = df_joined.groupby(
+            ['Year', 'Month', 'Day', 'Avg_temp', 'Menu_Code']
+            ).agg({'Quantity': 'sum'}).reset_index()
+        # Reordenar las columnas
+        df_grouped = df_grouped[[
+            'Quantity', 'Year', 'Month', 'Day', 'Avg_temp', 'Menu_Code'
+            ]]
+        # Guardar el resultado en un nuevo archivo CSV
+        df_grouped.to_csv(output_prep_data, index=False)
+        logging.info(
+            "Los datos de bakery y temperatura fueron unidos y guardados en %s",
+                     output_prep_data)
+        return df_grouped, df_menu
+    except pd.errors.ParserError as e:
+        logging.error("Error en el preprocesamiento de los datos: %s", e)
+        return None
+
+
+def split_data(path_df_grouped, df_menu, output_split_data="data/clean_data/"):
+    """
+    Esta función se encarga de tomar los datos preprocesados
+    de ventas y clima, y realizar las siguientes tareas:
+    1. Unir los datos de ventas y clima.
+    2. Agrupar los datos por año, mes, día,
+       temperatura promedio y código de menú.
+    3. Guardar los datos en un nuevo archivo CSV.
+    """
+    try:
+        # Dividir el conjunto de datos en entrenamiento (80%) y prueba (20%)
+        train_df, test_df = train_test_split(path_df_grouped, test_size=0.2, random_state=42)
+        # Dividir el conjunto de datos de entrenamiento en entrenamiento (70%) y validación (30%)
+        train_df, val_df = train_test_split(train_df, test_size=0.3, random_state=42)
+        # Longitud de cada conjunto de datos
+        len_train = len(train_df)
+        len_val = len(val_df)
+        len_test = len(test_df)
+        len_menu = len(df_menu)
+        # Imprimir la longitud de cada conjunto de datos
+        logging.info(f"Tamaño del conjunto de entrenamiento: {len_train}")
+        logging.info(f"Tamaño del conjunto de validación: {len_val}")
+        logging.info(f"Tamaño del conjunto de prueba: {len_test}")
+        logging.info(f"Tamaño del conjunto de menú: {len_menu}")
+        # Convertir los DataFrames a formato CSV
+        train_df.to_csv(f'{output_split_data}train.csv', index=False)
+        val_df.to_csv(f'{output_split_data}val.csv', index=False)
+        test_df.to_csv(f'{output_split_data}test.csv', index=False)
+        df_menu.to_csv(f'{output_split_data}menu_codes.csv', index=False)
+        logging.info("Los datos fueron divididos y guardados en %s",
+                     output_split_data)
     except pd.errors.ParserError as e:
         logging.error("Error en el preprocesamiento de los datos: %s", e)
         return None
