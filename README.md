@@ -30,7 +30,7 @@ El objetivo de SmartBakery es construir un producto de datos que optimice el inv
 
 ## Contenido
 
-* [Working Backwards en PDF](working_backwards)
+* [Working Backwards en PDF](working_backwards/00_Working backwards_SmartBakery.pdf)
 Los documentos que conforman el working backwards, donde se detalla el proceso y la oferta de valor de SmartBakery, se encuestran en esta sección:
 
   - **Press Release**
@@ -129,34 +129,36 @@ https://us-east-1.quicksight.aws.amazon.com/sn/accounts/058264510014/dashboards/
 ```
 .
 ├── EDA
-│ └── EDA_Bakery.ipynb
+│   └── EDA_Bakery.ipynb
 ├── README.md
 ├── aws_s3.py
 ├── bakery_reg_endpoint.ipynb
+├── config.yaml
 ├── data
-│ ├── prep
-│ └── raw
-├── data_prep_bakery.py
+│   ├── prep
+│   │   └── data_bakery_prep.csv
+│   └── raw
+│       ├── Bakery_Sales.csv
+│       └── TempTot.csv
 ├── environment.yml
 ├── imgs
-│ ├── Costos_SmartBakery.png
-│ ├── Costos_SmartBakery1.png
-│ ├── SmartBakery.jpg
-│ ├── SmartBakery.png
-│ ├── boceto_SmartBakery.png
-│ └── logo.png
+│   ├── Costos_SmartBakery.png
+│   ├── SmartBakery.jpg
+│   ├── SmartBakery.png
+│   ├── Vista_Previa_SB.png
+│   ├── boceto_SmartBakery.png
+│   └── logo.png
 ├── logs
-│ ├── 20240517_214746_prep.log
-│ └── 20240519_145437_s3.log
-├── prep.py
-├── prep_train_data.py
+├── prep_previo.py
+├── prep_split_data.py
+├── smartbakerypred.json
 ├── src
-│ └── scripts_prep.py
+│   ├── __pycache__
+│   │   └── scripts_prep.cpython-311.pyc
+│   └── scripts_prep.py
 └── working_backwards
-├── 01_PressRelease_SmartBakery.docx
-├── 01_PressRelease_SmartBakery.pdf
-├── 02_5Quest_SmartBakery.docx
-├── 02_5Quest_SmartBakery.pdf
-├── 03_FAQ_SmartBakery.docx
-└── 03_FAQ_SmartBakery.pdf
+    ├── 00_WorkingBackwards_SmartBakery.pdf
+    ├── 01_PressRelease_SmartBakery.pdf
+    ├── 02_5Quest_SmartBakery.pdf
+    └── 03_FAQ_SmartBakery.pdf
 ```
