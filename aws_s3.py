@@ -13,7 +13,10 @@ from botocore.exceptions import (
     PartialCredentialsError,
     ClientError
 )
-
+# Lee las credenciales de AWS desde las variables de entorno
+aws_access_key_id = os.getenv('AWS_ACCESS_KEY_ID')
+aws_secret_access_key = os.getenv('AWS_SECRET_ACCESS_KEY')
+region = os.getenv('AWS_REGION')
 # Se configura el logging
 if not os.path.exists("logs/"):
     os.makedirs("logs/")
@@ -29,8 +32,8 @@ logging.basicConfig(
 )
 
 # Credenciales de AWS
-VAR_KEY_ID = ''
-VAR_ACCESS_KEY = ''
+VAR_KEY_ID = aws_access_key_id
+VAR_ACCESS_KEY = aws_secret_access_key
 logging.info("Credenciales de AWS cargadas correctamente")
 
 # Set the S3 bucket name and file names
